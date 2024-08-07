@@ -5,7 +5,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 @Component({
     selector: 'HomeComponent',
     standalone: true,
-    imports: [RouterLink, CommonModule],
+    imports: [RouterOutlet, RouterLink, CommonModule],
     templateUrl: './home.component.html',
     styleUrl: './home.component.css'
   })

@@ -1,0 +1,105 @@
+/* Fondo oscuro para todo el componente */
+:host {
+  background-color: #000C1F;
+  color: #ffffff;
+  display: block;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos para los encabezados */
+h1, h2 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 22px;
+ 
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #00b09b, #96c93d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-size: 1.9rem;
+  font-weight: normal;
+  color: #94A3B8;
+}
+
+/* Centrar el contenido del section */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Estilos mejorados para las tarjetas */
+.card {
+  width: 320px;
+  height: 260px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: visible;
+   background: linear-gradient(to right, #00b09b, #96c93d); /* Fondo del card */
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 188, 123, 0.7); /* Sombra alrededor de los bordes en tono congruente con el degradado */
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.8);
+  filter: blur(25px);
+  background: linear-gradient(to right, #00b09b, #96c93d); /* Verde y azul */
+  transition: opacity 0.5s;
+}
+
+.card-info {
+  background: #000C1F;
+  color: #94A3B8; /* Color del texto antes de hacer hover */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: 0.7rem;
+  font-size: 1.13rem;
+}
+
+.card .title {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+}
+
+/* Hover */
+.card:hover::after {
+  opacity: 0;
+}
+
+.card:hover .card-info {
+ transition: color 1s;
+ 
+}

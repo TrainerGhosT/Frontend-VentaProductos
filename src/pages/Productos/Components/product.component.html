@@ -1,0 +1,198 @@
+<div class="bg-[#000C1F] text-slate-200 p-4 rounded-lg">
+  <h1 class="text-4xl font-bold text-gradient mb-4 text-start">
+    Registro de Productos
+  </h1>
+  <div class="grid grid-cols-1 md:grid-cols-[0.4fr,1fr] gap-10">
+    <div
+      class="p-4 border-solid border-[3.5px] rounded-lg shadow-md bg-[#000C1F] w-full md:w-auto"
+      style="border-image: linear-gradient(to right, #00b09b, #96c93d) 1"
+    >
+      <!-- Formulario de Registro -->
+      <form>
+        <div class="relative mb-4">
+          <input
+            type="text"
+            id="codigo"
+            class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-2 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-teal-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="codigo"
+            class="absolute text-md text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 left-1 z-10 origin-[0] bg-[#000C1F] px-2 peer-focus:px-2 peer-focus:text-teal-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4"
+            >Código</label
+          >
+        </div>
+
+        <div class="relative mb-4">
+          <input
+            type="text"
+            id="descripcion"
+            class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-2 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-teal-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="descripcion"
+            class="absolute text-md text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 left-1 z-10 origin-[0] bg-[#000C1F] px-2 peer-focus:px-2 peer-focus:text-teal-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4"
+            >Descripción</label
+          >
+        </div>
+
+        <div class="relative mb-4">
+          <input
+            type="number"
+            id="precio"
+            class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-2 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-teal-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="precio"
+            class="absolute text-md text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 left-1 z-10 origin-[0] bg-[#000C1F] px-2 peer-focus:px-2 peer-focus:text-teal-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4"
+            >Precio</label
+          >
+        </div>
+
+        <div class="relative mb-4">
+          <input
+            type="text"
+            autocomplete="billing"
+            id="saldoInventario"
+            class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-2 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-teal-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="saldoInventario"
+            class="absolute text-md text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 left-1 z-10 origin-[0] bg-[#000C1F] px-2 peer-focus:px-2 peer-focus:text-teal-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4"
+            >Saldo de Inventario</label
+          >
+        </div>
+
+        <div class="relative mb-4">
+          <input
+            type="text"
+            id="usuarioIngreso"
+            class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-2 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-teal-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="usuarioIngreso"
+            class="absolute text-md text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 left-1 z-10 origin-[0] bg-[#000C1F] px-2 peer-focus:px-2 peer-focus:text-teal-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4"
+            >Usuario de Ingreso</label
+          >
+        </div>
+
+        <div class="relative mb-4">
+          <input
+            type="date"
+            id="fechaIngreso"
+            class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-2 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-teal-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="fechaIngreso"
+            class="absolute text-md text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 left-1 z-10 origin-[0] bg-[#000C1F] px-2 peer-focus:px-2 peer-focus:text-teal-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4"
+            >Fecha de Ingreso</label
+          >
+          <svg
+            class="absolute top-1/2 right-3 transform -translate-y-1/2 pointer-events-none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            width="20"
+            height="20"
+            fill="#94A3B8"
+          >
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M96 32l0 32L48 64C21.5 64 0 85.5 0 112l0 48 448 0 0-48c0-26.5-21.5-48-48-48l-48 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32L160 64l0-32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192L0 192 0 464c0 26.5 21.5 48 48 48l352 0c26.5 0 48-21.5 48-48l0-272z"
+            />
+          </svg>
+        </div>
+
+        <div class="relative mb-4">
+          <select
+            id="familia"
+            class="block appearance-none w-full bg-[#000C1F] border-2 border-gray-300 text-gray-400 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-[#000C1F] focus:border-teal-600"
+          >
+            <option value="" selected disabled hidden>Familia</option>
+            <option>Familia 1</option>
+            <option>Familia 2</option>
+            <option>Familia 3</option>
+          </select>
+          <label
+            for="familia"
+            class="absolute text-lg text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 left-1 z-10 origin-[0] bg-[#000C1F] px-2 peer-focus:px-2 peer-focus:text-teal-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4"
+            >Familia</label
+          >
+          <svg
+            class="absolute top-1/2 right-3 transform -translate-y-1/2 pointer-events-none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            width="18"
+            height="18"
+            fill="#94A3B8"
+          >
+            <path
+              d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+            />
+          </svg>
+        </div>
+
+        <button
+          type="submit"
+          class="text-white font-semibold bg-gradient-to-r from-teal-500 to-lime-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm w-full px-5 py-2.5 text-center"
+        >
+          Registrar Producto
+        </button>
+      </form>
+    </div>
+
+    <!-- Tabla de productos -->
+    @let producto = productos;
+
+
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      
+
+      <table
+        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+      >
+        <thead
+          class="text-xs text-center  text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <tr>
+            <th scope="col" class="px-6 py-3">Codigo</th>
+            <th scope="col" class="px-6 py-3">Descripcion</th>
+            <th scope="col" class="px-6 py-3">Precio</th>
+            <th scope="col" class="px-6 py-3">Saldo</th>
+            <th scope="col" class="px-6 py-3">Usuario</th>
+            <th scope="col" class="px-6 py-3">Fecha</th>
+            <th scope="col" class="px-6 py-3">Familia</th>
+          </tr>
+        </thead>
+
+        <tbody class="text-center">
+          @for (producto of productos; track producto.codigo) {
+          <tr
+            class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
+          >
+            <th
+              scope="row"
+              class="px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              {{ producto.codigo }} 
+            </th>
+            <td class="px-6 py-4"> {{ producto.descripcion }} </td>
+            <td class="px-6 py-4"> CRC {{ producto.precio }} </td>
+            <td class="px-6 py-4">{{ producto.saldoInventario | currency }} </td>
+            <td class="px-6 py-4"> {{ producto.usuarioIngreso }} </td>
+            <td class="px-6 py-4"> {{ producto.fechaIngreso | date }} </td>
+            <td class="px-6 py-4"> {{ producto.familia }} </td>
+           
+          </tr>
+         
+        }
+        </tbody>
+      
+      </table>
+    </div>
+  </div>
+</div>

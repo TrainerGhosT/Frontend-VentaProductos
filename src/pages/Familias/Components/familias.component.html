@@ -1,0 +1,76 @@
+<div class="container mt-5">
+  <div class="row">
+    <!-- Formulario -->
+    <div class="col-md-6">
+      <h1 class="display-4 text-primary">Registro de Familias</h1>
+      <form class="border rounded p-4 shadow bg-dark text-light">
+        <div class="mb-3">
+          <label for="nombreFamilia" class="form-label"
+            >Nombre de Familia</label
+          >
+          <input
+            type="text"
+            id="nombreFamilia"
+            class="form-control"
+            placeholder="Ingrese nombre de familia"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="usuarioIngreso" class="form-label"
+            >Usuario de Ingreso</label
+          >
+          <input
+            type="text"
+            id="usuarioIngreso"
+            class="form-control"
+            placeholder="Ingrese usuario de ingreso"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="estado" class="form-label">Estado</label>
+          <select id="estado" class="form-select">
+            <option value="" selected disabled>Seleccione un estado</option>
+            <option value="1">Activo</option>
+            <option value="0">Inactivo</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">
+          Registrar Familia
+        </button>
+      </form>
+    </div>
+
+    <!-- Tabla de Familias -->
+
+    @let familia = familias;
+    <div class="col-md-6">
+      <h2 class="text-center mb-4 text-light">Familias Registradas</h2>
+      @if (familias.length === 0 ) {
+      <div class="text-center text-muted">
+        No se encontraron familias registradas.
+      </div>
+      } @else {
+      <table class="table table-dark table-striped table-hover rounded">
+        <thead>
+          <tr>
+            <th>ID Familia</th>
+            <th>Nombre de Familia</th>
+            <th>Usuario de Ingreso</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (familia of familias; track familia.IdFamilia) {
+          <tr>
+            <td>{{ familia.IdFamilia }}</td>
+            <td>{{ familia.NombreFamilia }}</td>
+            <td>{{ familia.usuarioIngreso }}</td>
+            <td>@if (familia.Estado == 1) { Activo } @else { Inactivo }</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+      }
+    </div>
+  </div>
+</div>
