@@ -4,7 +4,7 @@
   </h1>
   <div class="grid grid-cols-1 md:grid-cols-[0.4fr,1fr] gap-10">
     <div
-      class="p-4 border-solid border-[3.5px] rounded-lg shadow-md bg-[#000C1F] w-full md:w-auto"
+      class="p-4 border-solid border-[3.5px] shadow-md bg-[#000C1F] w-full md:w-auto"
       style="border-image: linear-gradient(to right, #00b09b, #96c93d) 1"
     >
       <!-- Formulario de Registro -->
@@ -82,7 +82,7 @@
 
         <div class="relative mb-4">
           <input
-            type="date"
+            type="datetime-local"
             id="fechaIngreso"
             class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-2 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-teal-600 peer"
             placeholder=" "
@@ -96,26 +96,28 @@
             class="absolute top-1/2 right-3 transform -translate-y-1/2 pointer-events-none"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
-            width="20"
-            height="20"
+            width="22"
+            height="22"
             fill="#94A3B8"
           >
             <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
             <path
-              d="M96 32l0 32L48 64C21.5 64 0 85.5 0 112l0 48 448 0 0-48c0-26.5-21.5-48-48-48l-48 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32L160 64l0-32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192L0 192 0 464c0 26.5 21.5 48 48 48l352 0c26.5 0 48-21.5 48-48l0-272z"
+              d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm80 64c-8.8 0-16 7.2-16 16l0 96c0 8.8 7.2 16 16 16l96 0c8.8 0 16-7.2 16-16l0-96c0-8.8-7.2-16-16-16l-96 0z"
             />
           </svg>
         </div>
 
         <div class="relative mb-4">
           <select
-            id="familia"
+            id="familiaSelect"
             class="block appearance-none w-full bg-[#000C1F] border-2 border-gray-300 text-gray-400 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-[#000C1F] focus:border-teal-600"
           >
-            <option value="" selected disabled hidden>Familia</option>
-            <option>Familia 1</option>
-            <option>Familia 2</option>
-            <option>Familia 3</option>
+            <option value="" selected>Selecciona una Familia</option>
+            @for (familia of BaseFamilias; track familia.idFamilia) {
+            <option value="{{ familia.idFamilia }}">
+              {{ familia.nombreFamilia }}
+            </option>
+            }
           </select>
           <label
             for="familia"
@@ -146,17 +148,13 @@
     </div>
 
     <!-- Tabla de productos -->
-    @let producto = productos;
-
 
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-      
-
       <table
         class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
       >
         <thead
-          class="text-xs text-center  text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          class="text-xs text-center text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
         >
           <tr>
             <th scope="col" class="px-6 py-3">Codigo</th>
@@ -168,9 +166,8 @@
             <th scope="col" class="px-6 py-3">Familia</th>
           </tr>
         </thead>
-
         <tbody class="text-center">
-          @for (producto of productos; track producto.codigo) {
+          @for (producto of productos; track producto.idProducto) {
           <tr
             class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
           >
@@ -178,20 +175,18 @@
               scope="row"
               class="px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white"
             >
-              {{ producto.codigo }} 
+              {{ producto.codigoProducto }}
             </th>
-            <td class="px-6 py-4"> {{ producto.descripcion }} </td>
-            <td class="px-6 py-4"> CRC {{ producto.precio }} </td>
-            <td class="px-6 py-4">{{ producto.saldoInventario | currency }} </td>
-            <td class="px-6 py-4"> {{ producto.usuarioIngreso }} </td>
-            <td class="px-6 py-4"> {{ producto.fechaIngreso | date }} </td>
-            <td class="px-6 py-4"> {{ producto.familia }} </td>
-           
+            <td class="px-6 py-4">{{ producto.descripcion }}</td>
+            <td class="px-6 py-4">{{ producto.precio | currency : "CRC " }}</td>
+            <td class="px-6 py-4">{{ producto.saldoInventario }}</td>
+            <td class="px-6 py-4">{{ producto.usuarioIngreso }}</td>
+            <td class="px-6 py-4">{{ producto.fechaIngreso | date }}</td>
+            <td class="px-6 py-4">{{ producto.familia }}</td>
           </tr>
-         
-        }
+
+          }
         </tbody>
-      
       </table>
     </div>
   </div>
