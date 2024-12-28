@@ -16,7 +16,7 @@ export class FamiliaService {
   private API_URL = 'http://localhost:5082/api/in05';
   private http = inject(HttpClient);
 
-  // Obtener el Id y el nombre de las familais para el select
+  // Obtener el Id y el nombre de las familias para el select (feature soon)
   getBaseFamilias(): Observable<ISelectFamilias[]> {
     const baseFamilias$ = this.http.get<ISelectFamilias[]>(
       `${this.API_URL}/select-familias`

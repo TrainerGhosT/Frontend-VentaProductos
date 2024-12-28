@@ -5,10 +5,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 @Component({
     selector: 'HomeComponent',
     standalone: true,
-    imports: [RouterOutlet, RouterLink, CommonModule],
+    imports: [RouterLink, CommonModule],
     templateUrl: './home.component.html',
     styleUrl: './home.component.css'
   })
-  export default class HomeComponent {
+  export class HomeComponent {
     
   }

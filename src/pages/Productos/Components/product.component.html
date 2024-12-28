@@ -1,11 +1,11 @@
 <div class="bg-[#000C1F] text-slate-200 p-4 rounded-lg">
-  <h1 class="text-4xl font-bold text-gradient mb-4 text-start">
+  <h1 class="mb-4 text-4xl font-bold text-gradient text-start">
     Registro de Productos
   </h1>
   <div class="grid grid-cols-1 md:grid-cols-[0.4fr,1fr] gap-10">
     <div
       class="p-4 border-solid border-[3.5px] shadow-md bg-[#000C1F] w-full md:w-auto"
-      style="border-image: linear-gradient(to right, #00b09b, #96c93d) 1"
+      style="border-image: linear-gradient(to right, #00b09b, #3d3dc9) 1"
     >
       <!-- Formulario de Registro -->
       <form>
@@ -93,7 +93,7 @@
             >Fecha de Ingreso</label
           >
           <svg
-            class="absolute top-1/2 right-3 transform -translate-y-1/2 pointer-events-none"
+            class="absolute transform -translate-y-1/2 pointer-events-none top-1/2 right-3"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
             width="22"
@@ -125,7 +125,7 @@
             >Familia</label
           >
           <svg
-            class="absolute top-1/2 right-3 transform -translate-y-1/2 pointer-events-none"
+            class="absolute transform -translate-y-1/2 pointer-events-none top-1/2 right-3"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
             width="18"
@@ -140,7 +140,7 @@
 
         <button
           type="submit"
-          class="text-white font-semibold bg-gradient-to-r from-teal-500 to-lime-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm w-full px-5 py-2.5 text-center"
+          class="text-white font-semibold bg-gradient-to-r from-[#00b09b] to-[#3d3dc9] hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 rounded-lg text-sm w-full px-5 py-2.5 text-center"
         >
           Registrar Producto
         </button>
@@ -151,7 +151,7 @@
 
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table
-        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+        class="w-full text-sm text-left text-gray-500 rtl:text-right dark:text-gray-400"
       >
         <thead
           class="text-xs text-center text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
@@ -169,11 +169,11 @@
         <tbody class="text-center">
           @for (producto of productos; track producto.idProducto) {
           <tr
-            class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
+            class="border-b odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 dark:border-gray-700"
           >
             <th
               scope="row"
-              class="px-6 py-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              class="px-6 py-4 font-medium text-center text-gray-900 whitespace-nowrap dark:text-white"
             >
               {{ producto.codigoProducto }}
             </th>

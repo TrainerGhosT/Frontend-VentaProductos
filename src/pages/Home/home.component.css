@@ -13,13 +13,12 @@ h1, h2 {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 22px;
- 
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  background: linear-gradient(to right, #00b09b, #96c93d);
+  background: linear-gradient(to right, #00b09b, #3d3dc9);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -39,23 +38,24 @@ section {
   gap: 2rem;
 }
 
-/* Estilos mejorados para las tarjetas */
+
 .card {
-  width: 320px;
-  height: 260px;
+  width: 400px;
+  height: 350px;
   padding: 5px;
   border-radius: 1rem;
   overflow: visible;
-   background: linear-gradient(to right, #00b09b, #96c93d); /* Fondo del card */
+  background: linear-gradient(to right, #00b09b, #3d3dc9); /* Fondo del card */
   position: relative;
   z-index: 1;
   transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 20px rgba(0, 188, 123, 0.7); /* Sombra alrededor de los bordes en tono congruente con el degradado */
+  box-shadow: 0 0 20px rgba(0, 147, 188, 0.7); /* Sombra alrededor de los bordes en tono congruente con el degradado */
 }
 
 .card::after {
@@ -69,7 +69,7 @@ section {
   width: 100%;
   transform: scale(0.8);
   filter: blur(25px);
-  background: linear-gradient(to right, #00b09b, #96c93d); /* Verde y azul */
+  background: linear-gradient(to right, #00b09b, #3d3dc9); /* Verde y azul */
   transition: opacity 0.5s;
 }
 
@@ -88,10 +88,22 @@ section {
   font-size: 1.13rem;
 }
 
+
+.card img {
+  margin-bottom: -12px; /* Espacio reducido entre la imagen y el texto */
+}
+
+.image {
+  object-position: center;
+  object-fit: cover;
+}
+
+
 .card .title {
+  margin-top: 0; /* Elimina márgenes adicionales arriba del texto */
   font-weight: bold;
   letter-spacing: 0.1em;
-  margin-top: 10px;
+  text-align: center;
 }
 
 /* Hover */
@@ -100,6 +112,5 @@ section {
 }
 
 .card:hover .card-info {
- transition: color 1s;
- 
+  transition: color 1s;
 }

@@ -8,15 +8,15 @@ import { FamiliaService } from '../Services/familias.service';
 @Component({
   standalone: true,
   selector: 'FamiliaComponent',
-  imports: [RouterLink, CommonModule],
+  imports: [CommonModule],
   templateUrl: './familias.component.html',
   styleUrls: ['./familias.component.css'],
 })
 export default class FamiliasComponent {
-  private familiaService = inject(FamiliaService);
  Familias: IFamilia[] = [];
  Estados: ISelectEstados[] = [];
  BaseFamilias: IBaseFamilia[] = [];
+ private familiaService = inject(FamiliaService);
 
  ngOnInit(): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
